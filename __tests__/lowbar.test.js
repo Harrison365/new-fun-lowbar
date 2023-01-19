@@ -35,7 +35,9 @@ describe("fromPairs", () => {
   });
 });
 
-describe.only("times", () => {
+//////////////times///////////////////////////////////////////////////
+
+describe("times", () => {
   test("if n is 0, returns empty array", () => {
     let funky = (thing) => {
       return thing;
