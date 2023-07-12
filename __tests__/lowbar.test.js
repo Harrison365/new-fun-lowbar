@@ -70,3 +70,12 @@ describe("times", () => {
     expect(mock).toHaveBeenCalledWith(1); //0 or 1
   });
 });
+
+//to spy on console.log calls vvv
+consoleLogSpy = jest.spyOn(console, "log");
+expect(consoleLogSpy.mock.calls[0][0]).toBe(
+  "What ever you expect the first log to be"
+);
+expect(consoleLogSpy.mock.calls[1][0]).toBe("...and the second log to be this");
+//to clear this spy vvv
+consoleLogSpy.mockRestore();

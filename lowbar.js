@@ -44,6 +44,16 @@ function map(collection, action) {
   }
   return returnArr;
 }
-console.log(map([{ a: 1 }, { b: 2 }, { a: 3 }], "a"));
+console.log(
+  map([1, 2], (a) => {
+    return a + 1;
+  })
+);
+console.log(
+  map({ a: 1, b: 2 }, (a) => {
+    return a + 1;
+  })
+);
+console.log(map([{ a: 2 }, { b: 2 }, { a: 3 }], "a"));
 
 module.exports = { identity, fromPairs, times };
